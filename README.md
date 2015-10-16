@@ -6,9 +6,9 @@ A container image and systemd service to ease migration from an ElasticSearch cl
 
 Some facts on AWS ES Service - note that these stand since its launch, will change in the future:
 
-#### AWS ES 
+#### AWS ES
 
-* AWS ES is on 1.5.2 
+* AWS ES is on 1.5.2
 * has Kibana 4.0.3 as a plugin built-in
 * supports specific operations via `es:*` actions
 * runs via HTTP on port 80, without SSL
@@ -25,7 +25,7 @@ Some facts on AWS ES Service - note that these stand since its launch, will chan
 * Not supporting SSL is bad.
 * Not supporting access via instance profiles is bad.
 
-### Migrating 
+### Migrating
 
 We run our ELK stack on ES 1.7.x thus needed to re-index, that does not necessarily hold true for all use cases, but for most clusters running different versions re-indexing is the way to go.
 
@@ -100,3 +100,20 @@ Contributions are more than welcome.
 
 [PeoplePerHour]: https://www.peopleperhour.com
 [SuperTasker]: https://www.supertasker.com
+
+### License
+
+Copyright (C) 2015  PeoplePerHour Ltd
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
