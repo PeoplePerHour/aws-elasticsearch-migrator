@@ -76,7 +76,7 @@ After=docker.service
 [Service]
 User=core
 ExecStartPre=/usr/bin/docker pull peopleperhour/aws-elasticsearch-migrator
-ExecStart=/usr/bin/docker run --name migrator -e AWS_ACCESS_KEY_ID=foo -e ...  -e ... peopleperhour/aws-elasticsearch-migrator'
+ExecStart=/usr/bin/docker run --name migrator -e AWS_ACCESS_KEY_ID=foo -e ...  -e ... peopleperhour/aws-elasticsearch-migrator
 ExecStop=/usr/bin/docker stop migrator
 ExecStopPost=/usr/bin/docker rm migrator
 
