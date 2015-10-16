@@ -1,0 +1,26 @@
+input {
+  elasticsearch {
+    hosts    => [ "$ES_HOSTS" ]
+    port     => "$ES_PORT"
+    index    => "$ES_INDEX"
+    size     => $ES_SIZE
+    scan     => $ES_SCAN
+    scroll   => "$ES_SCROLL"
+    docinfo  => true
+  }
+}
+
+output {
+  stdout {
+    codec => "dots"
+  }
+  amazon_es {
+    hosts                 => ["$ES_HOSTS"]
+    aws_access_key_id     => "$AWS_ACCESS_KEY_ID"
+    aws_secret_access_key => "$AWS_SECRET_ACCESS_KEY"
+    region                => "$AWS_DEFAULT_REGION"
+    index                 => "%{[@metadata][_index]}"
+    document_type         => "%{[@metadata][_type]}"
+    document_id           => "%{[@metadata][_id]}"
+  }
+}
