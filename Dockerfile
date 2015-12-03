@@ -1,4 +1,4 @@
-FROM logstash:1.5.4
+FROM logstash
 MAINTAINER Panagiotis Moustafellos <pmoust@peopleperhour.com>
 
 ENV ES_HOSTS    localhost
